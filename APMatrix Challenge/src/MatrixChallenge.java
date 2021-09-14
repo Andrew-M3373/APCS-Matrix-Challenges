@@ -16,7 +16,7 @@ public class MatrixChallenge {
 		
 		System.out.println("\nThe maximum number in the matrix is " + maxNum(0));
 		System.out.println("\nThe minimum number in the matrix is " + minNum(0));
-		System.out.println("\nThe average number in the matrix is " + );
+		System.out.println("\nThe average number in the matrix is " + average(0));
 		
 	}
 	
@@ -45,6 +45,20 @@ public class MatrixChallenge {
 		}
 		
 		return min;
+	}
+	
+	public static int average(int average) {
+		//average = myArray[0][0];
+		int counter = 0;
+		
+		for (int row = 0; row < myArray.length; row++) {
+			for (int col = 0; col < myArray[row].length; col++) {
+					average += myArray[row][col];
+					counter ++;
+			}
+		}
+		
+		return (average/counter);
 	}
 
 }
